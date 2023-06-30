@@ -1,0 +1,6 @@
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Modul\bin\Debug\CrudApplication.Modul.dll
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Modul\bin\Debug\CrudApplication.Modul.pdb
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Modul\obj\Debug\CrudApplication.Modul.csproj.AssemblyReference.cache
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Modul\obj\Debug\CrudApplication.Modul.csproj.CoreCompileInputs.cache
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Modul\obj\Debug\CrudApplication.Modul.dll
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Modul\obj\Debug\CrudApplication.Modul.pdb

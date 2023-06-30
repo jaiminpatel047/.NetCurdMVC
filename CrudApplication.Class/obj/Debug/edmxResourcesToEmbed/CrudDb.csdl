@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CrudApplicatonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AddressDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Street" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="City" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PostCode" Type="Int32" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="PersonDetail" Relationship="Self.FK_PersonDetail_AddressDetail" FromRole="AddressDetail" ToRole="PersonDetail" />
+  </EntityType>
+  <EntityType Name="PersonDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AddressID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AddressDetail" Relationship="Self.FK_PersonDetail_AddressDetail" FromRole="PersonDetail" ToRole="AddressDetail" />
+  </EntityType>
+  <Association Name="FK_PersonDetail_AddressDetail">
+    <End Role="AddressDetail" Type="Self.AddressDetail" Multiplicity="1" />
+    <End Role="PersonDetail" Type="Self.PersonDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AddressDetail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonDetail">
+        <PropertyRef Name="AddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CrudApplicatonEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AddressDetail" EntityType="Self.AddressDetail" />
+    <EntitySet Name="PersonDetail" EntityType="Self.PersonDetail" />
+    <AssociationSet Name="FK_PersonDetail_AddressDetail" Association="Self.FK_PersonDetail_AddressDetail">
+      <End Role="AddressDetail" EntitySet="AddressDetail" />
+      <End Role="PersonDetail" EntitySet="PersonDetail" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

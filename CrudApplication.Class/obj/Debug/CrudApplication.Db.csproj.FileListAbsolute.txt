@@ -1,0 +1,14 @@
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Class\bin\Debug\CrudApplication.Class.dll.config
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Class\bin\Debug\CrudApplication.Class.dll
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Class\bin\Debug\CrudApplication.Class.pdb
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Class\bin\Debug\EntityFramework.dll
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Class\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Class\bin\Debug\EntityFramework.xml
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Class\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Class\obj\Debug\CrudApplication.Db.csproj.AssemblyReference.cache
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Class\obj\Debug\CrudApplication.Db.csproj.CoreCompileInputs.cache
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Class\obj\Debug\CrudApplication.Db.csproj.CopyComplete
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Class\obj\Debug\CrudApplication.Class.dll
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Class\obj\Debug\CrudApplication.Class.pdb
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Class\bin\Debug\CrudApplication.Modul.dll
+C:\Users\Aavitech Solutions\Desktop\c#\CrudApplication.Class\bin\Debug\CrudApplication.Modul.pdb

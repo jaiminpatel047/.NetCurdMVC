@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CrudApplicatonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AddressDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Street" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="City" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="State" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PostCode" Type="int" />
+    <Property Name="Country" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="AddressID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_PersonDetail_AddressDetail">
+    <End Role="AddressDetail" Type="Self.AddressDetail" Multiplicity="1" />
+    <End Role="PersonDetail" Type="Self.PersonDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AddressDetail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonDetail">
+        <PropertyRef Name="AddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CrudApplicatonModelStoreContainer">
+    <EntitySet Name="AddressDetail" EntityType="Self.AddressDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonDetail" EntityType="Self.PersonDetail" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_PersonDetail_AddressDetail" Association="Self.FK_PersonDetail_AddressDetail">
+      <End Role="AddressDetail" EntitySet="AddressDetail" />
+      <End Role="PersonDetail" EntitySet="PersonDetail" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
